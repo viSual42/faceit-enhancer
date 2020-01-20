@@ -13,6 +13,7 @@ import addMatchRoomPlayerColors from './features/add-match-room-player-colors'
 import addMatchRoomPlayerFlags from './features/add-match-room-player-flags'
 import addMatchRoomPlayerElos from './features/add-match-room-player-elos'
 import addMatchRoomPlayerStats from './features/add-match-room-player-stats'
+// Import addMatchRoomPlayerReorder from './features/add-match-room-player-reorder'
 import addMatchRoomEloEstimation from './features/add-match-room-elo-estimation'
 import copyMatchRoomCopyServerData from './features/copy-match-room-copy-server-data'
 import clickMatchRoomConnectToServer from './features/click-match-room-connect-to-server'
@@ -52,6 +53,7 @@ function observeMainContent(element) {
         element
       )
       runFeatureIf('matchRoomShowPlayerStats', addMatchRoomPlayerStats, element)
+
       addMatchRoomEloEstimation(element)
       addMatchRoomEloSelfResult(element)
       runFeatureIf(
@@ -73,6 +75,7 @@ function observeMainContent(element) {
       addMatchRoomPickPlayerStats(element)
       addMatchRoomPickPlayerElos(element)
       addMatchRoomPickPlayerFlags(element)
+      // AddMatchRoomPlayerReorder(element)
       runFeatureIf('matchRoomFocusMode', applyMatchRoomFocusMode, element)
     } else if (pages.isPlayerProfileStats()) {
       runFeatureIf(

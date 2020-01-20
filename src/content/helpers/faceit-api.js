@@ -98,7 +98,7 @@ export const getPlayerStats = async (userId, game, size = 20) => {
   }
 
   averageStats = mapAverageStatsMemoized(averageStats)
-
+  // Console.log('averageStats', averageStats)
   return {
     ...totalStats,
     ...averageStats

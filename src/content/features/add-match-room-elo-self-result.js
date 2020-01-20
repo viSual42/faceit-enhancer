@@ -25,7 +25,9 @@ export default async parent => {
   ) {
     return
   }
-  setFeatureAttribute(FEATURE_ATTRIBUTE, matchStateElement)
+  if (matchStateElement) {
+    setFeatureAttribute(FEATURE_ATTRIBUTE, matchStateElement)
+  }
 
   const self = await getSelf()
   const game = self.flag

@@ -34,7 +34,7 @@ export default async parent => {
     ? await getQuickMatch(roomId)
     : await getMatch(roomId)
 
-  if (!match || match.state === 'FINISHED') {
+  if (!match /* || match.state === 'FINISHED' */) {
     return
   }
 

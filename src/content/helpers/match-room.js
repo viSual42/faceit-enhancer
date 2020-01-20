@@ -108,7 +108,7 @@ export function mapPlayersToPartyColors(
           partyMember = acc.find(
             ({ activeTeamId }) => activeTeamId === curr.activeTeamId
           )
-        } else {
+        } else if (Array.isArray(partiesIds)) {
           const playerPartyId = partiesIds.find(partyId => {
             const party = parties[partyId]
             return party.indexOf(curr.id) !== -1

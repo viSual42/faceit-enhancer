@@ -61,6 +61,7 @@ export default async parent => {
       }
 
       const stats = await getPlayerStats(userId, game)
+      // Console.log(stats)
 
       if (!stats) {
         return
